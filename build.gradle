@@ -1,0 +1,19 @@
+apply plugin: 'scala'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.10.0'
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.version = '0.1'
+        pom.groupId = 'org.dialang.common'
+        pom.artifactId = 'dialang-common'
+    }
+}

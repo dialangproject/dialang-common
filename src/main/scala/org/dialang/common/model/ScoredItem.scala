@@ -18,8 +18,9 @@ class ScoredItem(item: Item) extends Serializable {
   var responseText = ""
   var answers = List[Answer]()
 
-  def toCase:ImmutableItem = {
-    val immutableAnswers = answers.map(a => ImmutableAnswer(a.id,a.itemId,a.text,a.correct))
-    ImmutableItem(id,itemType,skill,subskill,text,weight,score,correct,basketId,positionInBasket,positionInTest,responseId,responseText,immutableAnswers)
+  def toCase: ImmutableItem = {
+
+    val immutableAnswers = answers.map(a => ImmutableAnswer(a.id, a.itemId, a.text, a.correct))
+    ImmutableItem(id, itemType, skill, subskill, text, weight, score, correct, basketId, positionInBasket, positionInTest, responseId, responseText, immutableAnswers)
   }
 }
