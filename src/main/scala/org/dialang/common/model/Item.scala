@@ -2,7 +2,7 @@ package org.dialang.common.model
 
 import java.sql.ResultSet
 
-class Item(rs:ResultSet) extends Serializable {
+class Item(rs: ResultSet) extends Serializable {
 
   val id = rs.getInt("id")
   val itemType = rs.getString("type")

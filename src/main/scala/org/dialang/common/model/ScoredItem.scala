@@ -1,13 +1,7 @@
 package org.dialang.common.model
 
-class ScoredItem(item: Item) extends Serializable {
-
-  val id = item.id
-  val itemType = item.itemType
-  val skill = item.skill
-  val subskill = item.subskill
-  val text = item.text
-  val weight = item.weight
+class ScoredItem(val id: Int, val itemType: String, val skill: String, val subskill: String, val text: String, val weight: Int)
+  extends Serializable {
 
   var score = 0
   var correct = false
@@ -21,6 +15,7 @@ class ScoredItem(item: Item) extends Serializable {
   def toCase: ImmutableItem = {
 
     val immutableAnswers = answers.map(a => ImmutableAnswer(a.id, a.itemId, a.text, a.correct))
-    ImmutableItem(id, itemType, skill, subskill, text, weight, score, correct, basketId, positionInBasket, positionInTest, responseId, responseText, immutableAnswers)
+    ImmutableItem(id, itemType, skill, subskill, text, weight, score, correct, basketId, positionInBasket,
+                    positionInTest, responseId, responseText, immutableAnswers)
   }
 }
