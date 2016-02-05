@@ -6,6 +6,8 @@ import java.util.Date
 class DialangSession extends Serializable with DialangLogger {
 
   var userId = ""
+  var firstName = ""
+  var lastName = ""
   var consumerKey = ""
   var sessionId = ""
   var ipAddress = ""
