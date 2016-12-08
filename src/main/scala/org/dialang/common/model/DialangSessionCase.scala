@@ -17,4 +17,5 @@ case class DialangSessionCase(sessionId: String
                                 , bookletLength: Int
                                 , nextBasketId: Int
                                 , scoredBasketList: List[Basket]
-                                , scoredItemList: List[ImmutableItem])
+                                , scoredItemList: List[ImmutableItem]
+                                , resultUrl: String)

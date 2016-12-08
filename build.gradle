@@ -13,7 +13,7 @@ dependencies {
 
 install {
     repositories.mavenInstaller {
-        pom.version = '0.1'
+        pom.version = '1.1'
         pom.groupId = 'org.dialang.common'
         pom.artifactId = 'dialang-common'
     }

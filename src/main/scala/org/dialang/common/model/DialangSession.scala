@@ -9,6 +9,9 @@ class DialangSession extends Serializable with DialangLogger {
   var firstName = ""
   var lastName = ""
   var consumerKey = ""
+  var resourceLinkId = ""
+  var resultUrl = ""
+  var resourceLinkTitle = ""
   var sessionId = ""
   var ipAddress = ""
   var passId = ""
@@ -73,12 +76,15 @@ class DialangSession extends Serializable with DialangLogger {
 
     clearPass()
     sessionId = ""
+    resourceLinkId = ""
+    resultUrl = ""
+    resourceLinkTitle = ""
   }
 
   def toCase(): DialangSessionCase = {
 
     DialangSessionCase(sessionId, passId, tes.al, tes.tl, tes.skill, vsptSubmitted, vsptSkipped, saSubmitted
                           , saSkipped, vsptZScore, vsptMearaScore, vsptLevel, saPPE, saLevel, bookletLength
-                          , nextBasketId, scoredBasketList, scoredItemList)
+                          , nextBasketId, scoredBasketList, scoredItemList, resultUrl)
   }
 }
