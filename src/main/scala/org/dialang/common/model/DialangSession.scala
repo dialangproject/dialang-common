@@ -9,6 +9,7 @@ class DialangSession extends Serializable with DialangLogger {
   var firstName = ""
   var lastName = ""
   var browserLocale = ""
+  var browserReferrer = ""
   var consumerKey = ""
   var resourceLinkId = ""
   var resultUrl = ""
@@ -77,6 +78,7 @@ class DialangSession extends Serializable with DialangLogger {
 
     clearPass()
     browserLocale = ""
+    browserReferrer = ""
     sessionId = ""
     resourceLinkId = ""
     resultUrl = ""
