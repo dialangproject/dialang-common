@@ -219,7 +219,7 @@ class ScoringMethods {
 
       // Rebuild the string without punctuation defined in the punctuation list.
       val secondPass = firstPass.toString.filter(c => {
-          val hexString = Integer.toHexString(c.charValue)
+          val hexString = Integer.toHexString(c.charValue).toUpperCase
           punctuationList.contains(hexString) == false
         })
 
