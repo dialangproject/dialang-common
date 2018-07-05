@@ -2,7 +2,7 @@ package org.dialang.db
 
 import java.sql.{DriverManager,Connection,Statement,PreparedStatement,SQLException}
 
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
 import scala.collection.mutable.{ListBuffer,HashMap,ArrayBuffer}
 
 //import org.dialang.web.model._
