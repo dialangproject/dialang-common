@@ -26,6 +26,7 @@ class DialangSession extends Serializable with DialangLogger {
   var vsptLevel = "V0"
   var saPPE = 0F
   var saLevel = ""
+  var itemRawScore = 0
   var itemGrade = 0
   var itemLevel = ""
   var saResponses = Map[String, Int]()
@@ -63,6 +64,7 @@ class DialangSession extends Serializable with DialangLogger {
     vsptLevel = "V0"
     saPPE = 0F
     saLevel = ""
+    itemRawScore = 0
     itemGrade = 0
     itemLevel = ""
     saResponses = Map[String, Int]()

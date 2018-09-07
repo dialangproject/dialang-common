@@ -174,7 +174,7 @@ class ScoringMethods {
       }
   }
 
-  def getItemGrade(tl: String, skill: String, bookletId: Int, scoredItems: List[ImmutableItem]): Tuple2[Int, String] = {
+  def getItemGrade(tl: String, skill: String, bookletId: Int, scoredItems: List[ImmutableItem]): Tuple3[Int, Int, String] = {
 
     if (logger.isDebugEnabled) logger.debug("NUM ITEMS: " + scoredItems.length)
 
@@ -195,7 +195,7 @@ class ScoringMethods {
         }
       }
 
-    ((itemGrade.grade,db.levels.get(itemGrade.grade).get))
+    ((rawScore, itemGrade.grade, db.levels.get(itemGrade.grade).get))
   }
 
   /**
