@@ -7,6 +7,7 @@ class Item(rs: ResultSet) extends Serializable {
   val id = rs.getInt("id")
   val itemType = rs.getString("type")
   val skill = rs.getString("skill")
+  val position = rs.getInt("position")
   val subskill = rs.getString("subskill").toLowerCase
   val text = rs.getString("text")
   val weight = rs.getInt("weight")

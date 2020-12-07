@@ -147,7 +147,6 @@ class ScoringMethods {
 
     db.items.get(itemId) match {
         case Some(item) => {
-          //val scoredItem = new ScoredItem(item)
           val scoredItem = new ScoredItem(item.id, item.itemType, item.skill, item.subskill, item.text, item.weight)
           scoredItem.responseText = answerText
           var score = 0
